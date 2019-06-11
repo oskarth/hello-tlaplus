@@ -2,7 +2,7 @@
 TLC2 Version 2.13 of 18 July 2018
 @!@!@ENDMSG 2262 @!@!@
 @!@!@STARTMSG 2187:0 @!@!@
-Running breadth-first search Model-Checking with seed 3420531691700056763 with 4 workers on 8 cores with 1154MB heap and 2594MB offheap memory (Linux 5.0.10-200.fc29.x86_64 amd64, Oracle Corporation 1.8.0_212 x86_64).
+Running breadth-first search Model-Checking with seed -5769161073724358418 with 4 workers on 8 cores with 1154MB heap and 2594MB offheap memory (Linux 5.0.10-200.fc29.x86_64 amd64, Oracle Corporation 1.8.0_212 x86_64).
 @!@!@ENDMSG 2187 @!@!@
 @!@!@STARTMSG 2220:0 @!@!@
 Starting SANY...
@@ -25,11 +25,8 @@ Semantic processing of module MC
 SANY finished.
 @!@!@ENDMSG 2219 @!@!@
 @!@!@STARTMSG 2185:0 @!@!@
-Starting... (2019-06-11 23:39:20)
+Starting... (2019-06-11 23:36:23)
 @!@!@ENDMSG 2185 @!@!@
-@!@!@STARTMSG 2212:0 @!@!@
-Implied-temporal checking--satisfiability problem has 1 branches.
-@!@!@ENDMSG 2212 @!@!@
 @!@!@STARTMSG 2189:0 @!@!@
 Computing initial states...
 @!@!@ENDMSG 2189 @!@!@
@@ -48,68 +45,15 @@ Computed 16 initial states...
 @!@!@STARTMSG 2190:0 @!@!@
 Finished computing initial states: 25 distinct states generated.
 @!@!@ENDMSG 2190 @!@!@
-@!@!@STARTMSG 2200:0 @!@!@
-Progress(5) at 2019-06-11 23:39:21: 332 states generated, 222 distinct states found, 0 states left on queue.
-@!@!@ENDMSG 2200 @!@!@
-@!@!@STARTMSG 2192:0 @!@!@
-Checking temporal properties for the complete state space with 222 total distinct states at (2019-06-11 23:39:21)
-@!@!@ENDMSG 2192 @!@!@
-@!@!@STARTMSG 2116:1 @!@!@
-Temporal properties were violated.
-
-@!@!@ENDMSG 2116 @!@!@
-@!@!@STARTMSG 2264:1 @!@!@
-The following behavior constitutes a counter-example:
-
-@!@!@ENDMSG 2264 @!@!@
-@!@!@STARTMSG 2217:4 @!@!@
-1: <Initial predicate>
-/\ people = {"alice", "bob"}
-/\ sender = <<"alice", "alice">>
-/\ receiver = <<"bob", "bob">>
-/\ acc = [alice |-> 5, bob |-> 5]
-/\ amount = <<1, 1>>
-/\ pc = <<"CheckAndWithdraw", "CheckAndWithdraw">>
-
-@!@!@ENDMSG 2217 @!@!@
-@!@!@STARTMSG 2217:4 @!@!@
-2: <CheckAndWithdraw line 51, col 27 to line 57, col 77 of module wire>
-/\ people = {"alice", "bob"}
-/\ sender = <<"alice", "alice">>
-/\ receiver = <<"bob", "bob">>
-/\ acc = [alice |-> 4, bob |-> 5]
-/\ amount = <<1, 1>>
-/\ pc = <<"CheckAndWithdraw", "Deposit">>
-
-@!@!@ENDMSG 2217 @!@!@
-@!@!@STARTMSG 2217:4 @!@!@
-3: <CheckAndWithdraw line 51, col 27 to line 57, col 77 of module wire>
-/\ people = {"alice", "bob"}
-/\ sender = <<"alice", "alice">>
-/\ receiver = <<"bob", "bob">>
-/\ acc = [alice |-> 3, bob |-> 5]
-/\ amount = <<1, 1>>
-/\ pc = <<"Deposit", "Deposit">>
-
-@!@!@ENDMSG 2217 @!@!@
-@!@!@STARTMSG 2217:4 @!@!@
-4: <Deposit line 59, col 18 to line 62, col 68 of module wire>
-/\ people = {"alice", "bob"}
-/\ sender = <<"alice", "alice">>
-/\ receiver = <<"bob", "bob">>
-/\ acc = [alice |-> 3, bob |-> 6]
-/\ amount = <<1, 1>>
-/\ pc = <<"Done", "Deposit">>
-
-@!@!@ENDMSG 2217 @!@!@
-@!@!@STARTMSG 2218:4 @!@!@
-5: Stuttering
-@!@!@ENDMSG 2218 @!@!@
-@!@!@STARTMSG 2267:0 @!@!@
-Finished checking temporal properties in 00s at 2019-06-11 23:39:21
-@!@!@ENDMSG 2267 @!@!@
+@!@!@STARTMSG 2193:0 @!@!@
+Model checking completed. No error has been found.
+  Estimates of the probability that TLC did not check all reachable states
+  because two distinct states had the same fingerprint:
+  calculated (optimistic):  val = 1.3E-15
+  based on the actual fingerprints:  val = 1.7E-15
+@!@!@ENDMSG 2193 @!@!@
 @!@!@STARTMSG 2201:0 @!@!@
-The coverage statistics at 2019-06-11 23:39:21
+The coverage statistics at 2019-06-11 23:36:29
 @!@!@ENDMSG 2201 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
   line 38, col 12 to line 38, col 17 of module wire: 37
@@ -175,11 +119,17 @@ The coverage statistics at 2019-06-11 23:39:21
 End of statistics.
 @!@!@ENDMSG 2202 @!@!@
 @!@!@STARTMSG 2200:0 @!@!@
-Progress(5) at 2019-06-11 23:39:21: 332 states generated (37,303 s/min), 222 distinct states found (24,943 ds/min), 0 states left on queue.
+Progress(5) at 2019-06-11 23:36:29: 332 states generated (3,740 s/min), 222 distinct states found (2,501 ds/min), 0 states left on queue.
 @!@!@ENDMSG 2200 @!@!@
 @!@!@STARTMSG 2199:0 @!@!@
 332 states generated, 222 distinct states found, 0 states left on queue.
 @!@!@ENDMSG 2199 @!@!@
+@!@!@STARTMSG 2194:0 @!@!@
+The depth of the complete state graph search is 5.
+@!@!@ENDMSG 2194 @!@!@
+@!@!@STARTMSG 2268:0 @!@!@
+The average outdegree of the complete state graph is 1 (minimum is 0, the maximum 2 and the 95th percentile is 2).
+@!@!@ENDMSG 2268 @!@!@
 @!@!@STARTMSG 2186:0 @!@!@
-Finished in 833ms at (2019-06-11 23:39:21)
+Finished in 5616ms at (2019-06-11 23:36:29)
 @!@!@ENDMSG 2186 @!@!@
